@@ -1,51 +1,77 @@
-import styled from 'styled-components';
+import styled from "styled-components";
 
-export const ContainerHeader = styled.div`
+export const Container = styled.div`
+  background-color: ${({ theme }) => theme.colors.secondary.one};
+  color: ${({ theme }) => theme.colors.tertiary.one};
+  width: 100%;
+  height: 50vh;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
 
-    background-color: #1abc9c;
-    width: 100%;
-    color: white;
-    padding-top: 3em;
-    padding-bottom: 3em;
-    display: grid;
-    font-family: monospace;
-    font-size: 24px;
+  &::selection {
+    background: ${({ theme }) => theme.colors.primary.one};
+  }
+
+  & a {
+    transition: all 0.3s ease-in-out;
+  }
 `;
 
-export const Instruction = styled.div`
-    background-color: #666;
-    width: fit-content;
-    padding: 1em;
-    border-radius: 10px;
-    margin: auto;
-    font-family: monospace;
-    margin-bottom: 1em;
-    display: flex;
+export const Content = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  height: 100%;
 
-    span {
-        font-family: monospace;
-        font-size: 20px;
-        margin-right: 15px  ;
-    }
+  & > div {
+    display: grid;
+    grid-template-rows: 5fr 1fr;
+    height: 100%;
+  }
 `;
 
 export const HelpPost = styled.div`
-    display: grid;
-    margin-top: 5em;
-    margin-bottom: 5em;
-    a {
-        font-family: 'logo';
-        text-decoration: none;
-        font-size: 40px;
-    }
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+
+  & a {
+    text-align: center;
+    font-family: var(--system-fonts-logo);
+    text-decoration: none;
+    font-size: 40px;
+    transition: all 0.3s ease-in-out;
+  }
+
+  & a:hover {
+    color: ${({ theme }) => theme.colors.tertiary.two};
+  }
+`;
+
+export const Emoji = styled.span`
+  font-family: Opentype;
 `;
 
 export const FooterNote = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100%;
+  user-select: none;
 
-    bottom: 5px;
-    width: 100%;
-    position: relative;
-    span {
-        font-size: 14px;
-    }
+  & span {
+    font-size: 14px;
+  }
+
+  & a:last-child {
+    color: ${({ theme }) => theme.colors.tertiary.two};
+  }
+
+  & a:hover {
+    color: ${({ theme }) => theme.colors.tertiary.one};
+  }
 `;

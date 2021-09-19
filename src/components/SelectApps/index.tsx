@@ -1,59 +1,54 @@
-import apps from './../../data/apps.json';
-import { AppSelect, ButtonDownload, CategorySection, Container, ContainerCategories, Title } from './styles';
+import React from "react";
+import { apps } from "../../data/apps";
+import { ICategory } from "./ISelectApps";
+import {
+  ButtonDownload,
+  ButtonRaw,
+  ButtonsContainer,
+  Container,
+  ContainerCategories,
+  Section,
+  Selector,
+  Title,
+} from "./styles";
 
-interface ICategory {
-  name: string,
-  apps: IApp[]
-}
-
-interface IApp {
-  name: string,
-  commands: string,
-  icon: string,
-  defaultCheck: boolean
-}
-
-function Footer() {
-
-  function AppSelector(app: IApp){
-    return (
-      <AppSelect className="AppSelect">
-        <input width={30} height={30} type="checkbox" name={app.name?.toString()} defaultChecked={app.defaultCheck} disabled={true}/>
-        {app.icon && (
-          <img src={app.icon} alt={app.name}/>
-        )}
-        <span>
-          {app.name}
-        </span>
-      </AppSelect>
-    )
-  }
+const Footer: React.FC = () => {
   return (
     <Container>
-        <Title className="noselect">
-            Choose your Apps :
-        </Title>
-
-        <ContainerCategories>
-          {
-            apps.map((category: ICategory) => {
-              return (
-                <CategorySection>
-                  {category.name}
-                  {category.apps.map((app: IApp) => 
-                    AppSelector(app)
-                  )}
-                </CategorySection>
-              )
-            })
-          }
-        </ContainerCategories>
-
-        <ButtonDownload href="./install.sh" download>
-          Download
-        </ButtonDownload>
+      <Title>Choose your Apps:</Title>
+      <ContainerCategories>
+        {apps.map((category: ICategory) => (
+          <Section key={category.name}>
+            <span>{category.name}</span>
+            {category.apps.map((app) => (
+              <Selector key={app.name}>
+                <input
+                  width={30}
+                  height={30}
+                  type="checkbox"
+                  name={app.name?.toString()}
+                  defaultChecked={app.defaultCheck}
+                  disabled
+                />
+                {app.icon && <img src={app.icon} alt={app.name} />}
+                <span>{app.name}</span>
+              </Selector>
+            ))}
+          </Section>
+        ))}
+      </ContainerCategories>
+      <ButtonsContainer>
+        <div>
+          <ButtonDownload href="./install.sh" download>
+            Download
+          </ButtonDownload>
+          <ButtonRaw href=".api/raw/install.sh" target="_blank">
+            RAW
+          </ButtonRaw>
+        </div>
+      </ButtonsContainer>
     </Container>
   );
-}
+};
 
 export default Footer;

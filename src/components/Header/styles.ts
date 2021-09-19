@@ -1,18 +1,44 @@
-import styled from 'styled-components';
+/* eslint-disable import/prefer-default-export */
+import styled from "styled-components";
 
-export const ContainerHeader = styled.div`
+export const Container = styled.div`
+  background-color: ${({ theme }) => theme.colors.primary.one};
+  color: ${({ theme }) => theme.colors.tertiary.one};
+  width: 100%;
+  height: 87vh;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
 
-    background-color: #1abc9c;
-    width: 100%;
-    color: white;
-    padding-top: 3em;
-    padding-bottom: 3em;
-    font-size: 60px;
-    font-family: 'logo';
-    display: grid;
+  & > div {
+    user-select: none;
+  }
+`;
+export const ContentGrid = styled.div`
+  display: grid;
+  align-items: center;
+  justify-content: center;
+  grid-template-rows: 5fr 1fr;
+  height: 100%;
+  width: 100%;
+`;
 
-    span {
-        font-family: sans-serif;
-        font-size: 20px;
-    }
+export const ContentTitle = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+`;
+
+export const Title = styled.h1`
+  font-family: "Sketch 3D";
+  font-size: 60px;
+`;
+
+export const Subtitle = styled.span`
+  font-family: var(--system-fonts-primary);
+  font-style: italic;
+  font-size: 14px;
+  font-weight: 100;
 `;
