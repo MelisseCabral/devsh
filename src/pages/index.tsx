@@ -1,6 +1,6 @@
-import Head from "next/head";
-import React from "react";
-import { SelectApps } from "../components";
+import Head from 'next/head';
+import React from 'react';
+import { SelectApps } from '../components';
 
 const Home: React.FC = () => {
   return (

@@ -1,11 +1,11 @@
 /* eslint-disable import/prefer-default-export */
-import styled from "styled-components";
+import styled from 'styled-components';
 
 export const Container = styled.div`
   background-color: ${({ theme }) => theme.colors.primary.one};
   color: ${({ theme }) => theme.colors.tertiary.one};
   width: 100%;
-  height: 87vh;
+  padding-bottom: 10vh;
   display: flex;
   flex-direction: column;
   flex: 1;
@@ -32,7 +32,7 @@ export const ContentTitle = styled.div`
 `;
 
 export const Title = styled.h1`
-  font-family: "Sketch 3D";
+  font-family: 'Sketch 3D';
   font-size: 60px;
 `;
 

@@ -1,12 +1,6 @@
-import React from "react";
-import { Box } from "../UI/styles";
-import {
-  Container,
-  ContentGrid,
-  ContentTitle,
-  Subtitle,
-  Title,
-} from "./styles";
+import React from 'react';
+import { Box } from '../UI/styles';
+import { Container, ContentGrid, ContentTitle, Subtitle, Title } from './styles';
 
 const Header: React.FC = () => {
   return (
@@ -14,12 +8,12 @@ const Header: React.FC = () => {
       <div>
         <ContentGrid>
           <ContentTitle>
-            <Title>{"</> DevSH"}</Title>
+            <Title>{'</> DevSH'}</Title>
             <Subtitle>The easiest way to a clean start.</Subtitle>
           </ContentTitle>
           <Box>
-            Choose the applications and download a shell script to install all
-            the dev tools you need for your debian system!_
+            Choose the applications and download a shell script to install all the dev tools you need for your debian
+            system!_
           </Box>
         </ContentGrid>
       </div>

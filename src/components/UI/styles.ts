@@ -1,5 +1,5 @@
 /* eslint-disable import/prefer-default-export */
-import styled from "styled-components";
+import styled from 'styled-components';
 
 export const H2 = styled.h2`
   color: ${({ theme }) => theme.colors.tertiary.one};
