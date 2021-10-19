@@ -1,6 +1,6 @@
-import { Copy } from "@styled-icons/ionicons-outline";
-import styled from "styled-components";
-import { Box } from "../UI/styles";
+import { Copy } from '@styled-icons/ionicons-outline';
+import styled from 'styled-components';
+import { Box } from '../UI/styles';
 
 export const Container = styled.div`
   background-color: ${({ theme }) => theme.colors.primary.one};

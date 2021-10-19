@@ -1,11 +1,11 @@
-import React, { MouseEvent } from "react";
-import { H2 } from "../UI/styles";
-import { commands } from "./data";
-import { Command, Container, Content, IconCopy, Instruction } from "./styles";
+import React, { MouseEvent } from 'react';
+import { H2 } from '../UI/styles';
+import { commands } from './data';
+import { Command, Container, Content, IconCopy, Instruction } from './styles';
 
 const InstallationGuide: React.FC = () => {
   const handleCopy = (e: MouseEvent): void => {
-    const value = String(e.currentTarget.getAttribute("data-value"));
+    const value = String(e.currentTarget.getAttribute('data-value'));
     navigator.clipboard.writeText(value);
   };
 

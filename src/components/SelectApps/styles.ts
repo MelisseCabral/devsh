@@ -1,5 +1,5 @@
-import styled from "styled-components";
-import { H2 } from "../UI/styles";
+import styled from 'styled-components';
+import { H2 } from '../UI/styles';
 
 export const Container = styled.form`
   color: ${({ theme }) => theme.colors.quaternary.one};
@@ -86,7 +86,7 @@ export const Selector = styled.div`
     cursor: pointer;
   }
 
-  & input[type="checkbox"] {
+  & input[type='checkbox'] {
     width: 20px; /*Desired width*/
     height: 20px; /*Desired height*/
   }

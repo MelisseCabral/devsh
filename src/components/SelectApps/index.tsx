@@ -1,6 +1,6 @@
-import React from "react";
-import { apps } from "../../data/apps";
-import { ICategory } from "./ISelectApps";
+import React from 'react';
+import { apps } from '../../data/apps';
+import { ICategory } from './ISelectApps';
 import {
   ButtonDownload,
   ButtonRaw,
@@ -9,8 +9,8 @@ import {
   ContainerCategories,
   Section,
   Selector,
-  Title,
-} from "./styles";
+  Title
+} from './styles';
 
 const Footer: React.FC = () => {
   return (
