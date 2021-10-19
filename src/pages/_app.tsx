@@ -1,7 +1,7 @@
 import type AppProps from 'next/app';
 import React from 'react';
 import { ThemeProvider } from 'styled-components';
-import { Footer, Header, InstallationGuide } from '../components';
+import { Footer, Header, InstallationGuide, SelectApps } from '../components';
 import { Article, Main } from '../components/UI/styles';
 import GlobalStyle from '../styles/globals';
 
@@ -23,7 +23,7 @@ const theme = {
   }
 };
 
-const App: React.FC<AppProps> = ({ Component, pageProps }) => {
+const App: React.FC<AppProps> = () => {
   return (
     <ThemeProvider theme={theme}>
       <Main>
@@ -31,7 +31,7 @@ const App: React.FC<AppProps> = ({ Component, pageProps }) => {
           <Header />
         </Article>
         <Article>
-          <Component {...pageProps} />
+          <SelectApps />
         </Article>
         <Article>
           <InstallationGuide />
